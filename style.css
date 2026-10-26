@@ -1,0 +1,104 @@
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+
+.grad-cap-box {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.grad-cap-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(35, 122, 59, 0.16);
+}
+.grad-cap-bg {
+  position: absolute;
+  right: -12px;
+  bottom: -16px;
+  width: 140px;
+  height: 140px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+.grad-cap-box:hover .grad-cap-bg {
+  transform: translateY(-10px) rotate(-8deg) scale(1.15);
+  opacity: 0.65;
+}
+.grad-cap-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styles pour les boîtes Débouchés vert IUC avec motifs rouges en coin */
+.iuc-green-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #237a3b;
+  border-radius: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.iuc-green-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(35, 122, 59, 0.35);
+}
+.iuc-corner-red-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  background-color: #b91c1c;
+  border-bottom-left-radius: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.iuc-corner-red-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  background-color: #b91c1c;
+  border-top-right-radius: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes fadeInTitle {
+      0% {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero-title-anim {
+      animation: fadeInTitle 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .clipped-angle {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%);
+    }
+
+.hero-background {
+  background-image: linear-gradient(rgba(26, 32, 28, 0.88), rgba(26, 32, 28, 0.92)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBK6DkPlTiQkPa5UkRRWMTWV68Tx9o8I8Jndllt0uwpodWrne2ShRc93hYfhe9ety1-UgRd0mEH-DwutrxesQ54fXxtetKB4F3juMGUW0sKCp-rFJhZj1PX6iAlnBhmvPVz9ZIYocSQ5TFsV18id9_S0BE-MN-2t5eRUnA1i6ty45xDWBiJio4-jlPziys977QK6PMCWvR2_1buKbzrICPMJDOZ1KJe-Blx59Ds5RWWL-V9yX1RVZEJL2XXmMzd6ebJgb4");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.international-background {
+  background-image: linear-gradient(rgba(10, 20, 35, 0.82), rgba(10, 20, 35, 0.88)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgGQ73c39Hfi6YKZ14E9yi_bGby4ErV7gsMqvxrzlEqLpjidCXVc0Hp8DF3tQqGUwBQLLwybly2fW0PkVQ6uCNiYguK6BaVj7h5hOLQbi438I4PKoavPCXQtJj2dkqSFK3RxO1MNOrpYDiajGB7USr4-kcNcrRt_pK7NlBXJVB8Uwo4IcxTatu-Zfwa5HGDK7z1Nk_N4DpR8tBgsaHO0Hi4kSbL6zCoJ7910gT6IZBWPTlx_cnuryaD3F1ptgvQd6S-T8");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.carousel-delay-517ms {
+  animation-delay: 517ms;
+}
+
+.carousel-delay-2202ms {
+  animation-delay: 2202ms;
+}
